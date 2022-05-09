@@ -12,7 +12,9 @@ spec:
     - http:
         paths:
         - path: /ordering-api
+          pathType: Prefix
           backend:
-            name: ordering-api
-            port:
-              number: 80 
+            service:
+              name: ordering-api
+              port:
+                number: 80 

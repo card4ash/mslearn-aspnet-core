@@ -12,7 +12,9 @@ spec:
     - http:
         paths:
         - path: /
+          pathType: Prefix
           backend:
-            name: webspa
-            port:
-              number: 80 
+            service:
+              name: webspa
+              port:
+                number: 80 

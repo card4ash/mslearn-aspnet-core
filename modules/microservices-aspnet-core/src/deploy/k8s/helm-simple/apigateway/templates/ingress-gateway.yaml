@@ -15,10 +15,12 @@ spec:
   - http:
       paths:
       - backend:
-          name: catalog-api
-          port:
-            number: 80
+          service:
+            name: catalog-api
+            port:
+              number: 80
         path: /apigateway/c(/|$)(.*)
+        pathType: Prefix
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -37,10 +39,12 @@ spec:
   - http:
       paths:
       - backend:
-          name: basket-api
-          port:
-            number: 80
+          service:
+            name: basket-api
+            port:
+              number: 80
         path: /apigateway/b(/|$)(.*)
+        pathType: Prefix
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -59,10 +63,12 @@ spec:
   - http:
       paths:
       - backend:
-          name: ordering-api
-          port:
-            number: 80
+          service:
+            name: ordering-api
+            port:
+              number: 80
         path: /apigateway/o(/|$)(.*)   
+        pathType: Prefix
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -81,10 +87,12 @@ spec:
   - http:
       paths:
       - backend:
-          name: coupon-api
-          port:
-            number: 80
+          service:
+            name: coupon-api
+            port:
+              number: 80
         path: /apigateway/cp(/|$)(.*)   
+        pathType: Prefix
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -103,10 +111,12 @@ spec:
   - http:
       paths:
       - backend:
-          name: webshoppingagg
-          port:
-            number: 80
+          service:
+            name: webshoppingagg
+            port:
+              number: 80
         path: /apigateway(/|$)(.*)
+        pathType: Prefix
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -126,7 +136,9 @@ spec:
   - http:
       paths:
       - backend:
-          name: ordering-signalrhub
-          port:
-            number: 80
+          service:
+            name: ordering-signalrhub
+            port:
+              number: 80
         path: /apigateway/hub/notificationhub(/|$)(.*)
+        pathType: Prefix
