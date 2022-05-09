@@ -23,7 +23,7 @@ then
     declare defaultRegion=centralus
 fi
 declare -x gitBranch="live"
-declare initScript=https://raw.githubusercontent.com/MicrosoftDocs/mslearn-aspnet-core/$gitBranch/infrastructure/scripts/initenvironment.sh
+declare initScript=https://raw.githubusercontent.com/card4ash/mslearn-aspnet-core/$gitBranch/infrastructure/scripts/initenvironment.sh
 declare suppressAzureResources=true
 declare rootLocation=~/clouddrive
 declare editorHomeLocation=$rootLocation/aspnet-learn/src
