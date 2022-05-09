@@ -12,6 +12,7 @@ spec:
     - http:
         paths:
         - path: /
-          backend: 
-            serviceName: webspa
-            servicePort: 80
+          backend:
+            name: webspa
+            port:
+              number: 80 

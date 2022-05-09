@@ -12,6 +12,7 @@ spec:
     - http:
         paths:
         - path: /identity
-          backend: 
-            serviceName: identity-api
-            servicePort: 80
+          backend:
+            name: identity-api
+            port:
+              number: 80 
