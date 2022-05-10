@@ -107,9 +107,9 @@ then
     echo ACR created!
     echo
 fi
-
+echo "eshopAcrName $eshopAcrName"
 eshopRegistry=`az acr show -n $eshopAcrName --query "loginServer" -otsv`
-
+echo "eshopRegistry $eshopRegistry"
 if [ -z "$eshopRegistry" ]
 then
     echo "${newline}${errorStyle}ERROR! ACR server $eshopAcrName doesn't exist!${defaultTextStyle}${newline}"
